@@ -37,7 +37,7 @@ const monsters = {
             As you make a dash for the door a giant spider descends and take a bite of flesh,
             causing 75 hp damage.
         `,
-        hp: -75,
+        hp: -50,
         gold: 0
     }]
 };
