@@ -1,1 +1,1 @@
-import './find-by-id.test.js/index.js';
+import './find-by-id.test.js';
