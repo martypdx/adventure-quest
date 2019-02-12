@@ -37,8 +37,8 @@ const monsters = {
     id: 'monsters',
     title: 'A Den of Monsters',
     image: 'monsters.jpg',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    audio: 'monsters.wav',
+    action: 'monster-scream.wav',
     description: `
         You enter the quest chamber only to be confronted by a hoard of
         monsters. And they look hungry. What do you do?
