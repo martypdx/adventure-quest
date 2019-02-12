@@ -1,5 +1,7 @@
 import loadUser from '../load-user.js';
 import saveUser from '../save-user.js';
+import loadCompleted from '../load-completed.js';
+import saveCompleted from '../save-completed.js';
 import quests from '../quests.js';
 import findById from '../find-by-id.js';
 
@@ -54,13 +56,16 @@ choiceForm.addEventListener('submit', function(event) {
     const choiceId = formData.get('choice');
     const choice = findById(quest.choices, choiceId);
 
-    // change display results
     choiceForm.classList.add('hidden');
     result.classList.remove('hidden');
     resultDescription.textContent = choice.result;
 
-    // update user stats
     user.hp += choice.hp;
     user.gold += choice.gold;
     saveUser(user);
+    loadUser();
+
+    const completed = loadCompleted();
+    completed[quest.id] = true;
+    saveCompleted(completed);
 });
