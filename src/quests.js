@@ -35,7 +35,7 @@ const treasure = {
 
 const monsters = {
     id: 'monsters',
-    title: 'A Den of Mosters',
+    title: 'A Den of Monsters',
     image: 'treasure-chests.png',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
@@ -77,6 +77,6 @@ const monsters = {
 };
 
 
-const quests = [treasure];
+const quests = [treasure, monsters];
 
 export default quests;
