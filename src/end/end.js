@@ -1,7 +1,7 @@
 import loadData from '../load-data.js';
 import loadProfile from '../load-profile.js';
 import scoreHp from './score-hp.js';
-import scoreGold from './score-Gold.js';
+import scoreGold from './score-gold.js';
 import isDead from '../is-dead.js';
 
 const user = loadData('user');
