@@ -1,6 +1,7 @@
 import loadData from '../load-data.js';
 import loadProfile from '../load-profile.js';
 import scoreHp from './score-hp.js';
+// import isDead from '../is-dead.js';
 
 const user = loadData('user');
 loadProfile(user);
@@ -12,9 +13,9 @@ let story = 'After your adventures, ' + user.name + ' the ' + user.race + ', ';
 const hpResult = scoreHp(user.hp);
 story += hpResult;
 
-if(user.hp > 0) {
+// if(user.hp > 0) {
     
-}
+// }
 
 
 storyDisplay.textContent = story;

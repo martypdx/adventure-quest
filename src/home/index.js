@@ -12,8 +12,8 @@ userSignin.addEventListener('submit', function(event) {
         hp: 75,
         gold: 0
     };
-
     saveData('user', user);
+    
     const completed = {};
     saveData('completed', completed);
 

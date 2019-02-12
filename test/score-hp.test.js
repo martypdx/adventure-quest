@@ -3,6 +3,8 @@ import hpOptions from '../src/end/hp-options.js';
 
 const test = QUnit.test;
 
+QUnit.module('score hp');
+
 test('dead', function(assert) {
     const score = scoreHp(0);
     assert.equal(score, hpOptions.dead);

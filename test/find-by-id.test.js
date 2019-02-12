@@ -1,7 +1,9 @@
 import findById from '../src/find-by-id.js';
 const test = QUnit.test;
 
-test('find by id', function(assert) {
+QUnit.module('find by id');
+
+test('finds', function(assert) {
     const items = [
         { id: 'one' },
         { id: 'two' },

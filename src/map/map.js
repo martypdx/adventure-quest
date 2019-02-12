@@ -1,11 +1,12 @@
 import quests from '../quests.js';
 import loadData from '../load-data.js';
 import loadProfile from '../load-profile.js';
+import isDead from '../is-dead.js';
 
 const user = loadData('user');
 loadProfile(user);
 
-if(user.hp <= 0) {
+if(isDead(user)) {
     window.location = 'end.html';
 }
 
