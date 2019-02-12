@@ -14,3 +14,13 @@ main {
 .choice input {
     margin-right: 10px;
 }
+
+#result {
+    background: #e38548;
+    padding: 20px;
+}
+
+#result-description {
+    background: #e38548;
+    font-weight: bolder;
+}

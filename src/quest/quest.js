@@ -20,7 +20,7 @@ const description = document.getElementById('description');
 const choiceForm = document.getElementById('choice-form');
 const choices = document.getElementById('choices');
 const result = document.getElementById('result');
-const back = document.getElementById('back');
+const resultDescription = document.getElementById('result-description');
 
 title.textContent = quest.title;
 image.src = 'assets/quests/' + quest.image;
@@ -56,9 +56,8 @@ choiceForm.addEventListener('submit', function(event) {
 
     // change display results
     choiceForm.classList.add('hidden');
-    result.textContent = choice.result;
     result.classList.remove('hidden');
-    back.classList.remove('hidden');
+    resultDescription.textContent = choice.result;
 
     // update user stats
     user.hp += choice.hp;
