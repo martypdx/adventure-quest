@@ -35,7 +35,7 @@ const monsters = {
         description: 'Run away like good Sir Robin',
         result: `
             As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 75 hp damage.
+            causing 50 hp damage.
         `,
         hp: -50,
         gold: 0
