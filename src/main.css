@@ -61,6 +61,6 @@ button {
     justify-content: center;
 }
 
-.profile img {
+.profile * {
     margin-right: 5px;
 }
