@@ -13,12 +13,16 @@ if(isDead(user)) {
 const completed = loadData('completed');
 const nav = document.getElementById('quests');
 
+let hasQuests = false;
+
 for(let index = 0; index < quests.length; index++) {
     const quest = quests[index];
 
     if(completed[quest.id]) {
         continue;
     }
+
+    hasQuests = true;
 
     const link = document.createElement('a');
     link.classList.add('quest');
@@ -28,6 +32,6 @@ for(let index = 0; index < quests.length; index++) {
     nav.appendChild(link);
 }
 
-if(nav.children.length === 0) {
+if(hasQuests) {
     window.location = 'end.html';
 }
