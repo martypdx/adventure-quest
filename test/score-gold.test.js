@@ -3,7 +3,7 @@
 const test = QUnit.test;
 
 const goldOptions = {
-    poorAlive: 'you live as a poor begger',
+    poorAlive: 'you live as a poor beggar',
     poorDead: 'you leave nothing for your family',
     modestAlive: 'you live in a modest farming the earth',
     modestDead: 'you leave enough to buy your family a turkey dinner at the pub',
@@ -12,30 +12,23 @@ const goldOptions = {
 };
 
 function scoreGold(gold, isDead) {
+    let lifeStyle = '';
     if(gold === 0) {
-        if(isDead) {
-            return goldOptions.poorDead;
-        }
-        else {
-            return goldOptions.poorAlive;
-        }   
+        lifeStyle = 'poor';   
     }
     else if(gold <= 50) {
-        if(isDead) {
-            return goldOptions.modestDead;
-        }
-        else {
-            return goldOptions.modestAlive;
-        }   
+        lifeStyle = 'modest';   
     }
     else {
-        if(isDead) {
-            return goldOptions.richDead;
-        }
-        else {
-            return goldOptions.richAlive;
-        }
+        lifeStyle = 'rich';
     }
+
+    let status = 'Alive';
+    if(isDead) {
+        status = 'Dead';
+    }
+
+    return goldOptions[lifeStyle + status];
 
 }
 
