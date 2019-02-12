@@ -1,4 +1,5 @@
 import loadUser from '../load-user.js';
+import saveUser from '../save-user.js';
 import quests from '../quests.js';
 import findById from '../find-by-id.js';
 
@@ -49,9 +50,18 @@ for(let index = 0; index < quest.choices.length; index++) {
 choiceForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // get choice
+    const formData = new FormData(choiceForm);
+    const choiceId = formData.get('choice');
+    const choice = findById(quest.choices, choiceId);
 
-    // display results
+    // change display results
+    choiceForm.classList.add('hidden');
+    result.textContent = choice.result;
+    result.classList.remove('hidden');
+    back.classList.remove('hidden');
 
     // update user stats
+    user.hp += choice.hp;
+    user.gold += choice.gold;
+    saveUser(user);
 });
