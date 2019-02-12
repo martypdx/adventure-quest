@@ -5,10 +5,7 @@ function loadCompleted() {
     if(json) {
         completed = JSON.parse(json);
     }
-    else {
-        completed = {};
-    }
-
+    
     return completed;
 }
 

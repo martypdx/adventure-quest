@@ -1,4 +1,5 @@
 import saveUser from '../save-user.js';
+import saveCompleted from '../save-completed.js';
 const userSignin = document.getElementById('user-signin');
 
 userSignin.addEventListener('submit', function(event) {
@@ -14,6 +15,8 @@ userSignin.addEventListener('submit', function(event) {
     };
 
     saveUser(user);
+    const completed = {};
+    saveCompleted(completed);
 
     window.location = 'map.html';
 });
