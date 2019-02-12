@@ -46,8 +46,8 @@ const dragon = {
     id: 'dragon',
     title: 'A Problem Dragon',
     image: 'dragon.jpg',
-    audio: '',
-    action: '',
+    audio: 'dragon.wav',
+    action: 'dragon-growl.aiff',
     description: `
         You travel to a nearby village you have heard is being
         terrorized by a dragon. Sure enough as you rent a room
