@@ -1,3 +1,4 @@
+import saveUser from '../save-user.js';
 const userSignin = document.getElementById('user-signin');
 
 userSignin.addEventListener('submit', function(event) {
@@ -12,9 +13,7 @@ userSignin.addEventListener('submit', function(event) {
         gold: 0
     };
 
-    const json = JSON.stringify(user);
-
-    window.localStorage.setItem('user', json);
+    saveUser(user);
 
     window.location = 'map.html';
 });
