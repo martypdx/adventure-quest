@@ -32,6 +32,6 @@ for(let index = 0; index < quests.length; index++) {
     nav.appendChild(link);
 }
 
-if(hasQuests) {
+if(!hasQuests) {
     window.location = 'end.html';
 }
