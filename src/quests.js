@@ -36,7 +36,7 @@ const treasure = {
 const monsters = {
     id: 'monsters',
     title: 'A Den of Monsters',
-    image: 'treasure-chests.png',
+    image: 'monsters.jpg',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
@@ -44,15 +44,6 @@ const monsters = {
         monsters. And they look hungry. What do you do?
     `,
     choices: [{
-        id: 'run',
-        description: 'Run away like good Sir Robin',
-        result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 75 hp damage.
-        `,
-        hp: -75,
-        gold: 0
-    }, {
         id: 'negotiate',
         description: 'Negotiate with them',
         result: `
@@ -73,6 +64,15 @@ const monsters = {
         `,
         hp: -30,
         gold: 150
+    }, {
+        id: 'run',
+        description: 'Run away like good Sir Robin',
+        result: `
+            As you make a dash for the door a giant spider descends and take a bite of flesh,
+            causing 75 hp damage.
+        `,
+        hp: -75,
+        gold: 0
     }]
 };
 
