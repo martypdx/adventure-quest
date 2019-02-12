@@ -1,6 +1,9 @@
-import loadUser from '../load-user.js';
+import loadData from '../load-data.js';
+import loadProfile from '../load-profile.js';
 
-const user = loadUser();
+const user = loadData('user');
+loadProfile(user);
+
 const storyDisplay = document.getElementById('storyDisplay');
 
 let story = 'Well, ' + user.name + ' the ' + user.race + ', ';
@@ -8,7 +11,6 @@ let story = 'Well, ' + user.name + ' the ' + user.race + ', ';
 if(user.hp <= 0) {
     story += 'you are dead.';
 }
-
 
 
 storyDisplay.textContent = story;

@@ -1,14 +1,15 @@
 import quests from '../quests.js';
-import loadUser from '../load-user.js';
-import loadCompleted from '../load-completed.js';
+import loadData from '../load-data.js';
+import loadProfile from '../load-profile.js';
 
-const user = loadUser();
+const user = loadData('user');
+loadProfile(user);
 
 if(user.hp <= 0) {
     window.location = 'end.html';
 }
 
-const completed = loadCompleted();
+const completed = loadData('completed');
 const nav = document.getElementById('quests');
 
 for(let index = 0; index < quests.length; index++) {

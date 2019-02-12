@@ -1,11 +1,6 @@
 
-function loadUser() {
-    const json = window.localStorage.getItem('user');
-    let user = null;
-    if(json) {
-        user = JSON.parse(json);
-    }
-    else {
+function loadProfile(user) {
+    if(!user) {
         window.location = './';
     }
 
@@ -18,8 +13,6 @@ function loadUser() {
     avatar.src = 'assets/avatars/' + user.race + '.png';
     hp.textContent = user.hp;
     gold.textContent = user.gold;
-
-    return user;
 }
 
-export default loadUser;
+export default loadProfile;

@@ -1,11 +1,11 @@
-import loadUser from '../load-user.js';
-import saveUser from '../save-user.js';
-import loadCompleted from '../load-completed.js';
-import saveCompleted from '../save-completed.js';
+import loadData from '../load-data.js';
+import saveData from '../save-data.js';
+import loadProfile from '../load-profile.js';
 import quests from '../quests.js';
 import findById from '../find-by-id.js';
 
-const user = loadUser();
+const user = loadData('user');
+loadProfile(user);
 
 const searchParams = new URLSearchParams(window.location.search);
 const questId = searchParams.get('id');
@@ -17,7 +17,7 @@ if(!quest) {
 
 const title = document.getElementById('title');
 const image = document.getElementById('image');
-const audio = document.getElementById('audio');
+// const audio = document.getElementById('audio');
 const description = document.getElementById('description');
 const choiceForm = document.getElementById('choice-form');
 const choices = document.getElementById('choices');
@@ -62,10 +62,10 @@ choiceForm.addEventListener('submit', function(event) {
 
     user.hp += choice.hp;
     user.gold += choice.gold;
-    saveUser(user);
-    loadUser();
+    saveData('user', user);
+    loadProfile(user);
 
-    const completed = loadCompleted();
+    const completed = loadData('completed');
     completed[quest.id] = true;
-    saveCompleted(completed);
+    saveData('completed', completed);
 });
