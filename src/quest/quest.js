@@ -1,17 +1,15 @@
-// import quests from '../quests.js';
-// import findById from '../find-by-id/js';
+import loadUser from '../load-user.js';
+import quests from '../quests.js';
+import findById from '../find-by-id/js';
 
-const json = window.localStorage.getItem('user');
-let user = null;
-if(json) {
-    user = JSON.parse(json);
+loadUser();
+
+const searchParams = new URLSearchParams(window.location.search);
+const questId = searchParams.get('id');
+const search = findById(quests, questId);
+
+if(!search) {
+    window.location = 'map.html';
 }
-else {
-    window.location = './';
-}
 
-const name = document.getElementById('name');
-const avatar = document.getElementById('avatar');
 
-name.textContent = user.name;
-avatar.src = 'assets/avatars/' + user.race + '.png';
