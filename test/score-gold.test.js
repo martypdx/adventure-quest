@@ -1,36 +1,7 @@
-// import scoreHp from '../src/end/score-hp.js';
-// import hpOptions from '../src/end/hp-options.js';
+import scoreGold from '../src/end/score-gold.js';
+import goldOptions from '../src/end/gold-options.js';
 const test = QUnit.test;
 
-const goldOptions = {
-    poorAlive: 'you live as a poor beggar',
-    poorDead: 'you leave nothing for your family',
-    modestAlive: 'you live in a modest farming the earth',
-    modestDead: 'you leave enough to buy your family a turkey dinner at the pub',
-    richAlive: 'you and your whole family live in small castle in luxury',
-    richDead: 'your family builds a monument in your honor'
-};
-
-function scoreGold(gold, isDead) {
-    let lifeStyle = '';
-    if(gold === 0) {
-        lifeStyle = 'poor';   
-    }
-    else if(gold <= 50) {
-        lifeStyle = 'modest';   
-    }
-    else {
-        lifeStyle = 'rich';
-    }
-
-    let status = 'Alive';
-    if(isDead) {
-        status = 'Dead';
-    }
-
-    return goldOptions[lifeStyle + status];
-
-}
 
 QUnit.module('score gold');
 

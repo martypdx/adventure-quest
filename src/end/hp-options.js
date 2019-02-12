@@ -1,4 +1,3 @@
-
 const hpOptions = {
     dead: 'you are dead',
     frail: 'you retire in frail health',
