@@ -13,7 +13,7 @@ let story = 'After your adventures, ' + user.name + ' the ' + user.race + ', ';
 
 const hpResult = scoreHp(user.hp);
 const userIsDead = isDead(user);
-const goldResult = scoreGold(user.hp, userIsDead);
+const goldResult = scoreGold(user.gold, userIsDead);
 story += hpResult;
 story += ' and ';
 story += goldResult;

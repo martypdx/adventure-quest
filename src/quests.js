@@ -63,7 +63,7 @@ const dragon = {
             Unluckily, you trip over a discarded wagon wheel on your
             way out of town and take 40 hp damage. 
         `,
-        hp: -40,
+        hp: -35,
         gold: 35
     }, {
         id: 'fight',
