@@ -1,26 +1,30 @@
 const test = QUnit.test;
 
+const DEAD = 'you are dead';
+const FRAIL = 'you retire in frail health';
+const HEALTH = 'you retire and live a long life in good health';
+
 function scoreHp(hp) {
     if(hp <= 0) {
-        return 'you are dead';
+        return DEAD;
     }
     if(hp < 35) {
-        return 'you retire in frail health';
+        return FRAIL;
     }
-    return 'you retire and live a long life in good health';
+    return HEALTH;
 }
 
 test('dead', function(assert) {
     const score = scoreHp(0);
-    assert.equal(score, 'you are dead');
+    assert.equal(score, DEAD);
 });
 
 test('frail', function(assert) {
     const score = scoreHp(34);
-    assert.equal(score, 'you retire in frail health');
+    assert.equal(score, FRAIL);
 });
 
 test('good health', function(assert) {
     const score = scoreHp(35);
-    assert.equal(score, 'you retire and live a long life in good health');
+    assert.equal(score, HEALTH);
 });
