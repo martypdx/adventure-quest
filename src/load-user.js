@@ -14,6 +14,8 @@ function loadUser() {
 
     name.textContent = user.name;
     avatar.src = 'assets/avatars/' + user.race + '.png';
+
+    return user;
 }
 
 export default loadUser;

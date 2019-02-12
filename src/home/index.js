@@ -7,7 +7,9 @@ userSignin.addEventListener('submit', function(event) {
 
     const user = {
         name: formData.get('name'),
-        race: formData.get('race')
+        race: formData.get('race'),
+        hp: 75,
+        gold: 0
     };
 
     const json = JSON.stringify(user);
