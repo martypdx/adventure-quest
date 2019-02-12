@@ -2,7 +2,7 @@ import loadUser from '../load-user.js';
 import quests from '../quests.js';
 import findById from '../find-by-id.js';
 
-loadUser();
+const user = loadUser();
 
 const searchParams = new URLSearchParams(window.location.search);
 const questId = searchParams.get('id');
@@ -48,5 +48,10 @@ for(let index = 0; index < quest.choices.length; index++) {
 
 choiceForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
+    // get choice
+
+    // display results
+
+    // update user stats
 });
