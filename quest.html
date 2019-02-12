@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Results</title>
     <link rel="stylesheet" href="src/main.css">
-    <link rel="stylesheet" href="src/result/result.css">
+    <link rel="stylesheet" href="src/quest/quest.css">
 </head>
 <body>
     <header>
         <img src="assets/alchemy-logo.png" alt="Alchemy Code Lab Logo">
-        <h1>Coder Quiz Results</h1>
+        <h1>Adventure Quest</h1>
         <div class="profile">
             <img id="avatar">
             <span id="name"></span>
@@ -18,15 +18,18 @@
     </header>
     
     <main> 
+        <h2 id="title"></h2>
         <p>
-            Your ideal coding language is <span id="result">...</span>!
+            <img id="image">
+            <audio id="audio" autoplay></audio>
         </p>
-        <p>
-            <a href="quiz.html">Retake Quiz</a>
-        </p>
-        <p>
-            <a href="index.html">Start Over</a>
-        </p>
+        <p id="description"></p>
+        <form id="choice-form">
+            <p id="choices"></p>
+            <button>Choose</button>
+        </form>
+        <p class="hidden" id="result"></p>
+        <a class="hidden" id="back" href="map.html">Back to Map</a>
     </main>
 
     <footer>
@@ -35,6 +38,6 @@
         </cite>
     </footer>
 
-    <script type="module" src="src/result/result.js"></script>
+    <script type="module" src="src/quest/quest.js"></script>
 </body>
 </html>
